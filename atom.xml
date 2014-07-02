@@ -1,13 +1,13 @@
 <?xml version="1.0" encoding="utf-8"?>
 <feed xmlns="http://www.w3.org/2005/Atom">
 
-  <title><![CDATA[My Octopress Blog]]></title>
+  <title><![CDATA[KamikazeLab CodeBlog]]></title>
   <link href="http://vansters.github.io/KamikazeLab-CodeBlog/atom.xml" rel="self"/>
   <link href="http://vansters.github.io/KamikazeLab-CodeBlog/"/>
-  <updated>2014-07-02T13:06:41-05:00</updated>
+  <updated>2014-07-02T13:27:26-05:00</updated>
   <id>http://vansters.github.io/KamikazeLab-CodeBlog/</id>
   <author>
-    <name><![CDATA[Your Name]]></name>
+    <name><![CDATA[KamikazeLab Dev Team]]></name>
     
   </author>
   <generator uri="http://octopress.org/">Octopress</generator>
