@@ -4,7 +4,7 @@
   <title><![CDATA[KamikazeLab CodeBlog]]></title>
   <link href="http://vansters.github.io/KamikazeLab-CodeBlog/atom.xml" rel="self"/>
   <link href="http://vansters.github.io/KamikazeLab-CodeBlog/"/>
-  <updated>2014-07-02T13:27:26-05:00</updated>
+  <updated>2014-07-02T13:41:51-05:00</updated>
   <id>http://vansters.github.io/KamikazeLab-CodeBlog/</id>
   <author>
     <name><![CDATA[KamikazeLab Dev Team]]></name>
@@ -12,5 +12,15 @@
   </author>
   <generator uri="http://octopress.org/">Octopress</generator>
 
+  
+  <entry>
+    <title type="html"><![CDATA[Hello World]]></title>
+    <link href="http://vansters.github.io/KamikazeLab-CodeBlog/blog/2014/07/02/hello-world/"/>
+    <updated>2014-07-02T13:36:26-05:00</updated>
+    <id>http://vansters.github.io/KamikazeLab-CodeBlog/blog/2014/07/02/hello-world</id>
+    <content type="html"><![CDATA[<p><strong>Hi n_n!</strong>
+OLA K ASE &hellip; ? Jugando a ser blogger o q ase n_n</p>
+]]></content>
+  </entry>
   
 </feed>
