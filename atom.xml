@@ -4,22 +4,152 @@
   <title><![CDATA[KamikazeLab CodeBlog]]></title>
   <link href="http://vansters.github.io/KamikazeLab-CodeBlog/atom.xml" rel="self"/>
   <link href="http://vansters.github.io/KamikazeLab-CodeBlog/"/>
-  <updated>2014-07-02T13:41:51-05:00</updated>
+  <updated>2014-07-07T00:02:00-05:00</updated>
   <id>http://vansters.github.io/KamikazeLab-CodeBlog/</id>
   <author>
-    <name><![CDATA[KamikazeLab Dev Team]]></name>
+    <name><![CDATA[KamikazeLab Engineering Team]]></name>
     
   </author>
   <generator uri="http://octopress.org/">Octopress</generator>
 
   
   <entry>
-    <title type="html"><![CDATA[Hello World]]></title>
-    <link href="http://vansters.github.io/KamikazeLab-CodeBlog/blog/2014/07/02/hello-world/"/>
-    <updated>2014-07-02T13:36:26-05:00</updated>
-    <id>http://vansters.github.io/KamikazeLab-CodeBlog/blog/2014/07/02/hello-world</id>
-    <content type="html"><![CDATA[<p><strong>Hi n_n!</strong>
-OLA K ASE &hellip; ? Jugando a ser blogger o q ase n_n</p>
+    <title type="html"><![CDATA[Iniciando Con Octopress]]></title>
+    <link href="http://vansters.github.io/KamikazeLab-CodeBlog/blog/2014/07/06/iniciando-con-octopress/"/>
+    <updated>2014-07-06T22:03:42-05:00</updated>
+    <id>http://vansters.github.io/KamikazeLab-CodeBlog/blog/2014/07/06/iniciando-con-octopress</id>
+    <content type="html"><![CDATA[<h3>Que es Octopress ?</h3>
+
+<p>Antes que cualquier cosa comencemos hablando de forma rápida que es Octopress:</p>
+
+<blockquote><p>Octopress es un framework diseñado por Brandon Mathis usando Jekyll,
+este consiste en un generador de sitios estáticos, que se convierten en los post .</p></blockquote>
+
+<p>En lo personal nos parece que octopress es un buena solución para hacer un blog simple y rápido, sin
+tener que desarrollar todas las funcionalidades que un blog necesita, pero por otro lado es una plataforma
+que por su naturaleza ( buscar hacer un blog rápido y fácil ) es poco personalizable de primera instancia,
+si se requiere tomarse un tiempo para generar un estilo propio y funcionalidades distintas a los por defecto.</p>
+
+<p>No por nada vemos a lo largo de la red un numero considerable de blog con el mismo estilo, como este jajaja.
+Pero poco a poco iremos personalizando este blog y claro escribiendo nuestro camino en ese proceso.</p>
+
+<h3>Como montar tu blog con Octopress ?</h3>
+
+<p>Primeramente necesitamos un par de cosa muy simples:</p>
+
+<ul>
+<li>Saber un poco de <a href="http://git-scm.com/book/es">Git</a> y tenerlo instalado.</li>
+<li>Tener instalado <a href="https://www.ruby-lang.org/en/downloads/">Ruby</a> ya que Octopress y su base están desarrolladas en este lenguaje.</li>
+<li>Tener ganas de escribir n_n.</li>
+</ul>
+
+
+<h4>Paso 1: Clonar el repositorio oficial de octopress <a href="https://github.com/imathis/octopress">Link Repo</a>.</h4>
+
+<figure class='code'><figcaption><span>Clonando el repositorio de octopress</span><a href='https://github.com/imathis/octopress'>link</a></figcaption><div class="highlight"><table><tr><td class="gutter"><pre class="line-numbers"><span class='line-number'>1</span>
+</pre></td><td class='code'><pre><code class='bash'><span class='line'><span class="nv">$ </span>git clone git://github.com/imathis/octopress.git Nombre-del-Blog
+</span></code></pre></td></tr></table></div></figure>
+
+
+<h4>Paso 2: Instalando dependencias.</h4>
+
+<p><strong>2.1</strong> Primero que nada entramos a la carpeta creada al clonar el repositorio.</p>
+
+<figure class='code'><figcaption><span>Entramos a la carpeta de Octopress</span></figcaption><div class="highlight"><table><tr><td class="gutter"><pre class="line-numbers"><span class='line-number'>1</span>
+</pre></td><td class='code'><pre><code class='bash'><span class='line'><span class="nv">$ </span><span class="nb">cd </span>Nombre-del-Blog
+</span></code></pre></td></tr></table></div></figure>
+
+
+<p><strong>2.2</strong> Ahora instalaremos <a href="http://bundler.io/">Bundler</a>, este es un gestor de pendencias de ruby,
+tal como <strong>npm</strong> para <a href="http://nodejs.org/">Nodejs</a> o <strong>composer</strong> para <strong>php</strong>. Bundler es una gema muy importante en el mundo de ruby, ayuda a instalar de manera amigable las dependencias de cualquier proyecto.</p>
+
+<figure class='code'><figcaption><span>Instalamos Bundler</span><a href='http://bundler.io/'>link</a></figcaption><div class="highlight"><table><tr><td class="gutter"><pre class="line-numbers"><span class='line-number'>1</span>
+<span class='line-number'>2</span>
+<span class='line-number'>3</span>
+<span class='line-number'>4</span>
+</pre></td><td class='code'><pre><code class='bash'><span class='line'><span class="nv">$ </span>gem install bundler
+</span><span class='line'><span class="nv">$ </span>bundle install
+</span><span class='line'><span class="nv">$ </span>bundle update rake
+</span><span class='line'><span class="nv">$ </span>rake install
+</span></code></pre></td></tr></table></div></figure>
+
+
+<p>Expliquemos lo que hicimos en las cuatro lineas anteriores. En la linea 1 instalamos la gema <strong>bundler</strong>, que ya comentamos arriba, en la linea 2 iniciamos el comando para instalar todas las dependencias declaradas en el archivo <strong>Gemfile</strong>, el manejo de dependencias es una practica que debería ser adoptada por todos los desarrolladores sin importar el lenguaje que utilicen, facilita mucho el flujo de trabajo y ademas el compartir o colaborar en proyectos comunitarios, la linea 3 y 4  primero actualizan la gema rake y después proceden a inicializarla. <a href="https://github.com/jimweirich/rake">Rake</a> es un constructor de aplicaciones ruby, desarrollado de primara instancia para el framework <a href="http://rubyonrails.org/">Ruby On Rails</a> pero ahora es adoptado por la comunidad ruby para automatizar muchas tareas.</p>
+
+<p>Hasta este punto nuestro blog es funcional, podemos comenzar a generar nuestro primer post y verlo en funcionamiento en nuestro ambiente local.</p>
+
+<h3>Creando nuestro primer post octopress</h3>
+
+<p>Ahora que nuestro proyecto octopress ya tiene todas sus dependencias instaladas podemos proceder
+a crear nuestro primer post, vamos a requerir ayuda nuevamente de rake para ello.</p>
+
+<figure class='code'><figcaption><span>Creando un post</span></figcaption><div class="highlight"><table><tr><td class="gutter"><pre class="line-numbers"><span class='line-number'>1</span>
+</pre></td><td class='code'><pre><code class='bash'><span class='line'><span class="nv">$ </span>rake new_post<span class="o">[</span><span class="s2">&quot;Titulo del post&quot;</span><span class="o">]</span>
+</span></code></pre></td></tr></table></div></figure>
+
+
+<p>Una ves ejecutada esta acción nuestro primer post se creara como un archivo dentro de la ruta <strong><em>/Nombre-del-Blog/source/_post/año-mes-día-titulo-del-post.markdown</em></strong>, dentro de este archivo encontraremos algo parecido a la siguiente:</p>
+
+<figure class='code'><figcaption><span>Archivo del nuevo post - año-mes-día-titulo-del-post.markdown</span></figcaption><div class="highlight"><table><tr><td class="gutter"><pre class="line-numbers"><span class='line-number'>1</span>
+<span class='line-number'>2</span>
+<span class='line-number'>3</span>
+<span class='line-number'>4</span>
+<span class='line-number'>5</span>
+<span class='line-number'>6</span>
+<span class='line-number'>7</span>
+</pre></td><td class='code'><pre><code class='text'><span class='line'>---
+</span><span class='line'>layout: post
+</span><span class='line'>title: &quot;Titulo del post ...&quot;
+</span><span class='line'>date: xxxx-xx-xx xx:xx:xx -0x00
+</span><span class='line'>comments: true
+</span><span class='line'>categories:
+</span><span class='line'>---
+</span></code></pre></td></tr></table></div></figure>
+
+
+<p>Si modificamos un poco el archivo de nuestro primer post como el siguiente tendremos finalizado
+nuestro primer post.</p>
+
+<figure class='code'><figcaption><span>Archivo del nuevo post modificado - año-mes-día-titulo-del-post.markdown</span></figcaption><div class="highlight"><table><tr><td class="gutter"><pre class="line-numbers"><span class='line-number'>1</span>
+<span class='line-number'>2</span>
+<span class='line-number'>3</span>
+<span class='line-number'>4</span>
+<span class='line-number'>5</span>
+<span class='line-number'>6</span>
+<span class='line-number'>7</span>
+<span class='line-number'>8</span>
+<span class='line-number'>9</span>
+<span class='line-number'>10</span>
+</pre></td><td class='code'><pre><code class='text'><span class='line'>---
+</span><span class='line'>layout: post
+</span><span class='line'>title: &quot;Titulo del post ...&quot;
+</span><span class='line'>date: xxxx-xx-xx xx:xx:xx -0x00
+</span><span class='line'>comments: true
+</span><span class='line'>categories:
+</span><span class='line'>---
+</span><span class='line'>### Nuestro primer post en octopress ?
+</span><span class='line'>
+</span><span class='line'>Hola Octopress
+</span></code></pre></td></tr></table></div></figure>
+
+
+<p>Ahora con la ayuda de <strong>rake</strong> generaremos el blog y la previsualización del mismo, para que podamos visitar en nuestro navegador.</p>
+
+<figure class='code'><figcaption><span>Previsualizando el blog</span></figcaption><div class="highlight"><table><tr><td class="gutter"><pre class="line-numbers"><span class='line-number'>1</span>
+<span class='line-number'>2</span>
+</pre></td><td class='code'><pre><code class='bash'><span class='line'><span class="nv">$ </span>rake generate
+</span><span class='line'><span class="nv">$ </span>rake preview
+</span></code></pre></td></tr></table></div></figure>
+
+
+<p>Si accedes en tu navegador a <a href="http://localhost:4000/Nombre-del-Blog/">http://localhost:4000/Nombre-del-Blog/</a>
+tendrás algo muy parecido a esto:</p>
+
+<p><img src="http://vansters.github.io/KamikazeLab-CodeBlog/images/Basic_Blog_2014-07-06 23:53:26.png" /></p>
+
+<p>Bueno pues hasta aquí dejare este post, en la siguiente entrada profundizaremos en la configuración y como poner en <a href="https://pages.github.com/">GitHub Pages</a> este sistema de blogging estático.</p>
+
+<p>Gracias por leernos este post fue escrito por nuestro colaborador <strong>Mario Andrade</strong> <a href="https://twitter.com/TheVansters">@TheVansters</a>.</p>
 ]]></content>
   </entry>
   
